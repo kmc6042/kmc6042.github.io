@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Minchul Kang is a mechanical engineering student at Sungkyunkwan University. His goal is to let robots take on repetitive physical and mental labor, so people can spend their time on what matters more.">
+  <meta name="theme-color" content="#2962ff">
+  <title>Minchul Kang</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var mode = localStorage.getItem("theme") || "light";
+      var query = new URLSearchParams(location.search).get("theme");
+      if (query) mode = query;
+      var dark = mode === "dark" || (mode === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
+      if (dark) document.documentElement.classList.add("dark");
+    })();
+  </script>
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="90">
+
+  <aside class="search-results" id="search">
+    <div class="container">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6"><h1>Search</h1></div>
+        <div class="col-6 text-right">
+          <a class="js-search-close" href="#" aria-label="Close search"><i class="fas fa-times-circle text-muted"></i></a>
+        </div>
+      </div>
+      <input id="search-query" class="form-control" type="search" placeholder="Search..." autocomplete="off">
+      <div id="search-hits"></div>
+    </div>
+  </aside>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar-main">
+    <div class="container">
+      <!-- EDIT: 사이트 제목 -->
+      <a class="navbar-brand" href="#about">Minchul Kang</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <ul class="nav-icons navbar-nav flex-row ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown" aria-label="Theme"><i class="fas fa-palette"></i></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button" data-theme="light">Light</button>
+              <button class="dropdown-item" type="button" data-theme="dark">Dark</button>
+              <button class="dropdown-item" type="button" data-theme="auto">Automatic</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- EDIT: 프로필, 소개, 관심 분야, 학력 -->
+  <section id="about" class="home-section" data-search="Home">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div id="profile">
+            <img class="avatar-circle" src="minchulkang.jpeg" alt="Minchul Kang">
+            <div class="portrait-title">
+              <h2>Minchul Kang</h2>
+            </div>
+            <ul class="network-icon">
+              <li><a href="#contact" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+              <li><a href="https://github.com/kmc6042" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <h1>About me</h1>
+          <p class="bio">Minchul Kang is a mechanical engineering student at Sungkyunkwan University. His goal is to let robots take on the repetitive and unnecessary physical and mental labor of daily life,<br>so people can spend their time on what matters more.</p>
+          <div class="row about-sub">
+            <div class="col-md-5">
+              <h3>Interests</h3>
+              <ul class="ul-interests">
+                <li>loco-manipulation policy</li>
+              </ul>
+            </div>
+            <div class="col-md-7 about-edu">
+              <h3>Education</h3>
+              <ul class="ul-edu">
+                <li>
+                  <i class="fas fa-graduation-cap"></i>
+                  <div>
+                    <p class="course">Bachelor's degree, Mechanical Engineering,<br><span class="text-nowrap">2021 – 2027</span></p>
+                    <p class="institution">Sungkyunkwan University, Republic of Korea</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDIT: 경력. 블록을 복사해서 항목을 추가하세요. 첫 항목은 선이 아래로, 마지막 항목은 선이 위로만 가게 되어 있습니다. -->
+  <section id="experience" class="home-section" data-search="Experience">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 section-heading">
+          <h1>Experience</h1>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="row experience">
+            <div class="col-auto timeline-rail d-none d-sm-flex">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="col py-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title exp-title text-muted mt-0 mb-1">Intern</h4>
+                  <h4 class="card-title exp-company text-muted my-0">Sungkyunkwan University</h4>
+                  <div class="text-muted exp-meta">
+                    2025 –
+                    Present
+                  </div>
+                  <div class="card-text">Lab of Artificial Intelligence &amp; Robotics</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDIT: 논문. pub-list-item 블록을 복사하세요. 그림이 없으면 pub-banner 칸을 지우면 됩니다. -->
+  <section id="awards" class="home-section" data-search="Awards">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 section-heading">
+          <h1>Awards</h1>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="row experience">
+            <div class="col-auto timeline-rail d-none d-sm-flex">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="col py-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title exp-title text-muted mt-0 mb-1">Grand Award</h4>
+                  <h4 class="card-title exp-company text-muted my-0">SKKU Autonomous Vehicle Competition</h4>
+                  <div class="text-muted exp-meta">
+                    July 2026
+                    <span class="middot-divider"></span>
+                    <span>SKKU &amp; Hyundai Mobis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row experience">
+            <div class="col-auto timeline-rail d-none d-sm-flex">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="col py-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title exp-title text-muted mt-0 mb-1">Bronze Award</h4>
+                  <h4 class="card-title exp-company text-muted my-0">ASK 2026</h4>
+                  <div class="text-muted exp-meta">
+                    May 2026
+                    <span class="middot-divider"></span>
+                    <span>Korea Information Processing Society</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row experience">
+            <div class="col-auto timeline-rail d-none d-sm-flex">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="col py-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title exp-title text-muted mt-0 mb-1">Governor's Award</h4>
+                  <h4 class="card-title exp-company text-muted my-0">Gyeonggi Province Autonomous Vehicle Competition</h4>
+                  <div class="text-muted exp-meta">
+                    February 2026
+                    <span class="middot-divider"></span>
+                    <span>Gyeonggi Province</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row experience">
+            <div class="col-auto timeline-rail d-none d-sm-flex">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="col py-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title exp-title text-muted mt-0 mb-1">Grand Prize</h4>
+                  <h4 class="card-title exp-company text-muted my-0">Startup hackathon</h4>
+                  <div class="text-muted exp-meta">
+                    September 2025
+                    <span class="middot-divider"></span>
+                    <span>Upstage AI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDIT: 연락처 -->
+  <section id="contact" class="home-section" data-search="Contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 section-heading">
+          <h1>Contact</h1>
+        </div>
+        <div class="col-12 col-lg-8">
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:kmc6042@g.skku.edu">kmc6042@g.skku.edu</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Sungkyunkwan University, Republic of Korea</span>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/kmc6042" target="_blank" rel="noopener">github.com/kmc6042</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Minchul Kang</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
